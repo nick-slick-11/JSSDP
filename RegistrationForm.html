@@ -1,6 +1,10 @@
-<!DOCTYPE html>
 <html>
 <head>
+<title>
+Registration
+</title>
+<link rel="icon"  href="Logo.ico"> 
+<link rel="stylesheet" href="Design.css">
 <style>
     textarea {
         resize: none;
@@ -8,14 +12,21 @@
 </style>
 </head>
 <body>
+<a href="Welcome.html"><div id="homebutton"><img src="Logo-2.jpg" ></div></a>
+<div id="headbox">
+<p id="headboxtext"><font color="black">DoneDeal.com</font>
+</p></div>
+
+<div id="box1">
+<p id="box1text"><font color="black">
 <form name="eform" method="post" id="eForm">
-<label for="birthday">Date of Purchase:</label>
+<label for="birthday">  Date of Purchase:</label>
 	<input type="date" id="birthday" name="DOP" 
 	 min="2020-03-06" max="2020-07-03" value="2020-03-06">
 	<br>
-Address: <textarea type="text" id="myText" rows="5" cols="50"></textarea>
+  Address: <textarea type="text" id="myText" rows="5" cols="50"></textarea>
 <br>
-<label for="cars">Choose a Location:</label>
+<label for="cars">  Choose a Location:</label>
 	<select id="cars" name="cars">
 		<option value="Bengaluru">Bengaluru</option>
 		<option value="Hyderabad">Hyderabad</option>
@@ -24,7 +35,7 @@ Address: <textarea type="text" id="myText" rows="5" cols="50"></textarea>
 	</select>
 	<br>
 	<br>
-	<p>Save As</p>
+	<p>  Save As</p>
 	<input type="radio" name="add" value="Home Address" id="add">Home Address<br>
 	<input type="radio" name="add" value="Work Address" id="add">Work Address<br>
 	<br>
@@ -35,7 +46,7 @@ Address: <textarea type="text" id="myText" rows="5" cols="50"></textarea>
 	<input type="checkbox" id="vehicle3" name="vehicle3" value="Product 3">
 	<label for="vehicle3">product3</label><br>
 	<br>
-	<label for="quantity">Quantity</label>
+	<label for="quantity">  Quantity</label>
 	<select id="quantity" name="quantity">
 		<option value="one">1</option>
 		<option value="two">2</option>
@@ -55,7 +66,9 @@ onClick="myFunction()"	type="button"
 	<p id="pro1"></p>
 	<p id="pro2"></p>
 	<p id="pro3"></p>
-</form>
+</form></p>
+</div>
+
 <script>
 function myFunction() {
   var add = document.getElementById("myText").value;
