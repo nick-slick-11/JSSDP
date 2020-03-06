@@ -1,7 +1,35 @@
 <html>
 <head>
-  this is the change
+<title>
+Welcome
+</title>
 </head>
 <body>
+</h1>
+<form name="login">
+Username<input type="text" name="userid"/><br>
+Password<input type="password" name="pswrd"/><br>
+<input type="button" onclick="check(this.form)" value="Submit"/>
+<input type="reset" value="Reset"/>
+<a href="Secondpage.html">Click here</a>//Change appropriate link
+</form>
+<script language="javascript">
+function check(form)
+{
+ 
+ if(form.userid.value == "" || form.pswrd.value == "" )
+  {
+    alert("Username and Password cannot be empty")
+  }
+ else if(form.pswrd.value.length<4 || form.pswrd.value.length>12)
+ {
+  alert("Password length should be between 4 and 12 characters")
+ }
+ else{
+	alert("Credentials verified")
+  }
+
+}
+</script>
 </body>
 </html>
