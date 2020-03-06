@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    textarea {
+        resize: none;
+    }
+</style>
+</head>
+<body>
+<form name="eform" method="post" id="eForm">
+<label for="birthday">Date of Purchase:</label>
+	<input type="date" id="birthday" name="DOP" 
+	 min="2020-03-06" max="2020-07-03" value="2020-03-06">
+	<br>
+Address: <textarea type="text" id="myText" rows="5" cols="50"></textarea>
+<br>
+<label for="cars">Choose a Location:</label>
+	<select id="cars" name="cars">
+		<option value="Bengaluru">Bengaluru</option>
+		<option value="Hyderabad">Hyderabad</option>
+		<option value="Chennai">Chennai</option>
+		<option value="Mysore">Mysore</option>
+	</select>
+	<br>
+	<br>
+	<p>Save As</p>
+	<input type="radio" name="add" value="Home Address" id="add">Home Address<br>
+	<input type="radio" name="add" value="Work Address" id="add">Work Address<br>
+	<br>
+	<input type="checkbox" id="vehicle1" name="vehicle1" value="Product 1">
+	<label for="vehicle1">product1</label><br>
+	<input type="checkbox" id="vehicle2" name="vehicle2" value="Product 2">
+	<label for="vehicle2">product2</label><br>
+	<input type="checkbox" id="vehicle3" name="vehicle3" value="Product 3">
+	<label for="vehicle3">product3</label><br>
+	<br>
+	<label for="quantity">Quantity</label>
+	<select id="quantity" name="quantity">
+		<option value="one">1</option>
+		<option value="two">2</option>
+		<option value="three">3</option>
+	</select>
+	<!--input type="submit" onClick="va()"/--> 
+	<input type="hidden" id="sayTminLength" value="3">
+    <input type="hidden" id="coDomain" value="US">
+    <input class="button" onclick="btnSearchClick();" 
+onClick="myFunction()"	type="button" 
+	id="search.x" name="search.x" value="Done" autocomplete="off"> 
+	<p id="adr"></p>
+	<p id="loc"></p>
+	<p id="hoa"></p>
+	<p id="qua"></p>
+	<p id="da"></p>
+	<p id="pro1"></p>
+	<p id="pro2"></p>
+	<p id="pro3"></p>
+</form>
+<script>
+function myFunction() {
+  var add = document.getElementById("myText").value;
+  document.getElementById("adr").innerHTML = add;
+  var loc = document.getElementById("cars").value;
+  document.getElementById("loc").innerHTML = loc;
+  var howo = document.getElementById("add").value;
+  document.getElementById("hoa").innerHTML = howo;
+  var quan = document.getElementById("quantity").value;
+  document.getElementById("qua").innerHTML = quan;
+  var dop = document.getElementById("birthday").value;
+  document.getElementById("da").innerHTML = dop;
+  if(document.getElementById("vehicle1").checked){
+  var pro1 = document.getElementById("vehicle1").value;
+  document.getElementById("pro1").innerHTML = pro1;
+  }
+  if(document.getElementById("vehicle2").checked){
+  var pro2 = document.getElementById("vehicle2").value;
+  document.getElementById("pro2").innerHTML = pro2;
+  }
+  if(document.getElementById("vehicle3").checked){
+  var pro3 = document.getElementById("vehicle3").value;
+  document.getElementById("pro3").innerHTML = pro3;
+	}
+}
+function va(){
+	if((document.eform.vehicle1.checked ||document.eform.vehicle2.checked
+	||document.eform.vehicle3.checked)&&(document.eform.add.checked)){
+		//alert("Checked");
+	}
+	else {
+		alert("Fill All Requirements");
+	}
+}
+function submitForm() { // submits form
+        document.getElementById("eForm").submit();
+    }
+function btnSearchClick()
+    {
+        if (document.getElementById("eForm")) {
+            setTimeout("submitForm()", 20000); // set timout 
+			va();
+			myFunction();
+       }
+    }
+</script>
+
+</body>
+</html>
