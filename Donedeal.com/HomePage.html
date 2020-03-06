@@ -1,32 +1,35 @@
 <html>
 <head>
 <title>
-Welcome
+JoJo - Log In
 </title>
-<link rel="icon"  href="Logo.ico"> 
+<link rel="icon"  href="jojo1.png"> 
 <link rel="stylesheet" href="Design.css">
 </head>
 <body>
-<a href="Welcome.html"><div id="homebutton"><img src="Logo-2.jpg" ></div></a>
-<div id="headbox">
-<p id="headboxtext"><font color="black">DoneDeal.com</font>
-</p></div>
-<div>
-<div id="box1">
-<form name="login"><br>
-
-<br>
-<br>
-<p id="box1text"><font color="black">
-	<b>Sign In to Your Account<b><br><br>
-   <b>Username <b><input type="text" name="userid"/><br><br>
-   <b>Password <b><input type="password" name="pswrd"/><br><br>
-    <input type="button" onclick="check(this.form)" value="Submit"/>
-<input type="reset" value="Reset"/>
-<a href="RegistrationForm.html">Click here</a>
-</form>
-</p>
+<div class="NavBar">
+	<div id="HomeButton">
+		<a href="HomePage.html">
+			<img src="jojo1.png" style="position:fixed;left:0px;top:0px;width:65px;height:75px;z-index:5;">
+		</a>
+	</div>
+	<div class="NavTitle">
+		<p class="NavHead">JoJo Phones</p>
+	</div>
 </div>
+<div id="Box">
+	<form name="login">
+		<p id="signin">
+		<b>Sign In to Your Account</b><br></p>
+		<p id="box1text">
+		Username    <input type="text" name="userid"/><br><br>
+		Password    <input type="password" name="pswrd"/><br><br>
+		<input type="button" onclick="check(this.form)" value="Submit"/>
+		<input type="reset" value="Reset"/>
+		</p>
+		<p id="Proceed">
+		<a href="RegistrationForm.html">Proceed</a></p>
+	</form>
 </div>
 <script language="javascript">
 function check(form)
