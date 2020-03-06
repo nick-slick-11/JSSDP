@@ -1,7 +1,56 @@
 <html>
 <head>
-  this is the change
+<title>
+Welcome
+</title>
+<link rel="icon"  href="Logo.ico"> 
+<link rel="stylesheet" href="Design.css">
 </head>
 <body>
+<a href="Welcome.html"><div id="homebutton"><img src="Logo-2.jpg" ></div></a>
+<div id="headbox">
+<p id="headboxtext"><font color="black">DoneDeal.com</font>
+</p></div>
+<div>
+<div id="box1">
+<form name="login"><br>
+
+<br>
+<br>
+<p id="box1text"><font color="black">
+	<b>Sign In to Your Account<b><br><br>
+   <b>Username <b><input type="text" name="userid"/><br><br>
+   <b>Password <b><input type="password" name="pswrd"/><br><br>
+    <input type="button" onclick="check(this.form)" value="Submit"/>
+<input type="reset" value="Reset"/>
+<a href="RegistrationForm.html">Click here</a>
+</form>
+</p>
+</div>
+</div>
+<script language="javascript">
+function check(form)
+{
+	var i=form.userid.value;
+	var p=i.indexOf("@");
+	var q=i.indexOf(".");
+ if(form.userid.value == "" || form.pswrd.value == "" )
+  {
+    alert("Username and Password cannot be empty")
+  }
+  else if(p<1||q<p+2||q+2>=i.length)
+  {
+	alert("Enter Valid Email");
+  }
+ else if(form.pswrd.value.length<4 || form.pswrd.value.length>12)
+ {
+  alert("Password length should be between 4 and 12 characters")
+ }
+ else{
+	alert("Credentials verified, click on the Link given");
+  }
+
+}
+</script>
 </body>
 </html>
